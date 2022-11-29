@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import "./App.css";
 
 function App() {
-  const post = "블로그 내용1";
 
   return (
     <div className="App">
@@ -10,7 +9,7 @@ function App() {
         <h4>블로그임</h4>
       </div>
       <Blog1></Blog1>
-      <h4>{post}</h4>
+
     </div>
   );
 }
