@@ -5,9 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// <App /> : 컴포넌트
 root.render(
   <React.StrictMode>
-    <App />
+    <App />           
   </React.StrictMode>
 );
 

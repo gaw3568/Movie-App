@@ -1,27 +1,14 @@
 import logo from './logo.svg';
 import "./App.css";
+import Potato from './Potato';
 
+// 함수형 컴포넌트
+// 컴포넌트 : html 덩어리를 뱉어내는 함수
 function App() {
-
-  return (
-    <div className="App">
-      <div>
-        <h4>블로그임</h4>
-      </div>
-      <Blog1></Blog1>
-
-    </div>
-  );
-}
-
-function Blog1() {
-  return (
-    <div className="modal">
-      <h4>title</h4>
-      <p>Date</p>
-      <p>Detail Text</p>
-    </div>
-  )
+  return <div>
+    <h1>Hello</h1>
+    <Potato/>
+  </div>
 }
 
 export default App;
