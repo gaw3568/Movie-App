@@ -1,1 +1,3 @@
-# React를 활용한 Movie-App Clone Coding Project
+# Movie-App Clone Coding Project
+
+* 전반적으로 React Library 사용
