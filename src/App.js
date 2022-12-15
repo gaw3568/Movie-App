@@ -1,7 +1,6 @@
 import React from 'react';
 import "./App.css";
-import { ReactPropTypes } from 'react';
-import { checkPropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 const movieILike = [
@@ -48,6 +47,12 @@ function App() {
     <br></br>
     {movieILike.map(renderFood)}
   </div>;
+}
+
+Movie.checkPropTypes = {
+  name : PropTypes.string.isRequired,
+  poster : PropTypes.string.isRequired,
+  rating : PropTypes.number
 }
 
 export default App;
