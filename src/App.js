@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import "./App.css";
 import { ReactPropTypes } from 'react';
 import { checkPropTypes } from 'prop-types';
@@ -19,12 +19,6 @@ const movieILike = [
   },
   {
     id : 3,
-    name : "반지의 제왕 왕의 귀환",
-    image : "https://w.namu.la/s/e88f6d51b4d2264dbc1ac9a8ec267031a8b18a5697c260c598705e9eb66d1e2976203a69afcc8d027f4165b28eeabc2465c7a2eb4f92c9c3667bfc97b15eed54db623b0b39a0978381b10df6e381eb49e4022f13dc6fe30ccd714e210e30138cac183370c9dfe1d93060a90b451bc53e",
-    rating : 4.6
-  },
-  {
-    id : 4,
     name : "광해 왕이 된 남자",
     image : "https://upload.wikimedia.org/wikipedia/ko/a/a4/%EA%B4%91%ED%95%B4%2C_%EC%99%95%EC%9D%B4_%EB%90%9C_%EB%82%A8%EC%9E%90.jpg",
     rating : 4.2
@@ -33,27 +27,26 @@ const movieILike = [
 
 function Movie({name, poster, rating}) {
   return (<div>
-    <h2> {name} 좋아한다 어쩔래</h2>
-    <h4>{rating} / 5.0</h4>
+    <h2>제목 : {name}</h2>
+    <h4>평점 : {rating} / 5.0</h4>
     <img src={poster} alt={name}/>
+    <p>------------------------------------------------</p>
   </div>
   );
 }
-/*
-Movie.ReactPropTypes = {
-  name : ,
-  rating : ,
-  picture :
+
+function renderFood(movie) {
+  return <Movie id={movie.id} name={movie.name} poster={movie.image} rating={movie.rating}/>;
 }
-*/
 
 // 함수형 컴포넌트
 // 컴포넌트 : html 덩어리를 뱉어내는 함수
 function App() {
-
+  console.log(movieILike.map(renderFood));
   return <div>
-    <h2>여긴 영화페이지야 짜샤</h2>
-    {movieILike.map(movie => (<Movie name={movie.name} poster={movie.image} rating={movie.rating}/>))}
+    <h1 style={{color : "blue"}}>1. 영화</h1>
+    <br></br>
+    {movieILike.map(renderFood)}
   </div>;
 }
 
