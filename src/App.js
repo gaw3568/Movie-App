@@ -49,7 +49,7 @@ function App() {
   </div>;
 }
 
-Movie.checkPropTypes = {
+Movie.PropTypes = {
   name : PropTypes.string.isRequired,
   poster : PropTypes.string.isRequired,
   rating : PropTypes.number
